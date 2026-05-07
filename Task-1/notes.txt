@@ -1,0 +1,30 @@
+##Git commands
+#For 1st time we need to configure github in our system
+git config --global user.name "MADHURIMAPANIGRAHI"
+
+url(uniform resource locator):
+    https://eeducation.webdev.edu/Fullstack
+
+    https: protocols
+    webdev: server/domain name
+    education: subdomain
+    .edu: TLD
+    Fullstack: page
+
+protocols:A set of certain rules/instruction
+http: hyper text transfer protocols
+https: hyper text transfer protocols secured
+fdp: file transfer protocols
+smtp: simple main transfer protocols
+tcp:transmission control protocols
+udp: user datagram protocols
+ip:internet protocols
+
+
+http to https:
+using ssl(secure socket layer) certification
+TLD(top level domain):
+>> .edu
+>> .in
+>> .com
+>> .uk

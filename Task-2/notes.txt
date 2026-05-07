@@ -1,0 +1,14 @@
+to highlight in html we have the tag: <mark></mark>
+
+to show H2O in proper subscript 2 use tag like:
+    H<sub>2</sub>O
+    another tag is : <sup></sup>
+to navigate to a certain section in a webpage we use id:
+<h1 id="connectMe"> connect me </h1>
+(use this id)
+<a herf="#connectMe"> contact me</a>
+
+some attribute of anker(<a></a>) tag:
+herf= contains links
+target="_self"(means a website is load on same page)
+target="_blank"(website load in another tab)

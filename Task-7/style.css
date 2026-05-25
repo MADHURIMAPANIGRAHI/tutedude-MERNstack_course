@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    overflow: hidden; /* Hard restriction: strictly prevents scrolling */
+}
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 12vh; /* Explicit structural height budget */
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #1caff6;
+}
+
+.user-box {
+    background-color: #e0f2fe;
+    padding: 10px 24px;
+    border-radius: 12px;
+}
+
+.username {
+    color: #1caff6;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.hero-section {
+    height: 88vh; 
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background-color: #ffffff;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-title {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.highlight-text {
+    color: #1caff6;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #1caff6;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 32px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(28, 175, 246, 0.2);
+}
+
+.hero-image-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image {
+    max-height: 60vh; 
+    width: auto;
+    max-width: 100%;
+}
+
+
+@media (max-width: 1024px) {
+ 
+    .navbar {
+        padding: 0 40px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .nav-item {
+        font-size: 14px;
+    }
+    .user-box {
+        padding: 8px 18px;
+    }
+
+    .hero-section {
+        padding: 0 40px;
+    }
+    .hero-title {
+        font-size: 32px;
+    }
+    .hero-description {
+        font-size: 14px;
+    }
+    .hero-image {
+        max-height: 45vh;
+    }
+}
+
+/* 2. Mobile Version View */
+@media (max-width: 768px) {
+    body, html {
+        overflow-y: auto; 
+    }
+
+    .nav-links {
+        display: none;
+    }
+    
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .hero-section {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-image-box {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-image {
+        max-height: 35vh;
+    }
+}

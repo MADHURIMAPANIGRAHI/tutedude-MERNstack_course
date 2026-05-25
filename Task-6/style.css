@@ -1,0 +1,193 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff; /* Soft off-white/blue background for the entire window */
+}
+
+/* 1. Container Setup using Flexbox for Absolute Centering (No margin/padding hacks) */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 20px;
+}
+
+/* Split Layout Master Window Box */
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 650px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. Left Section Base & Image Alignment */
+.left-section {
+    flex: 1;
+    background-color: #0099ff; /* Blue layout background matching your image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.illustration {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* 3. Right Form Section Setup via Flexbox */
+.form-section {
+    flex: 1;
+    background-color: #f7fbff; /* Hint of blue matching the visual reference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* 4. Form Heading and Description */
+.form-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-header h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* 5. Email and Password Inputs styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    border-radius: 12px;
+    color: #333;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #cbd5e1;
+}
+
+.input-group input:focus {
+    border-color: #0099ff;
+}
+
+/* Actions box (Forgot Password right alignment) */
+.form-actions {
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 30px;
+}
+
+.forgot-link {
+    font-size: 12px;
+    color: #64748b;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* 6. Login Button Customizations */
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #0099ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.login-btn:hover {
+    background-color: #0080d9;
+}
+
+.login-btn:active {
+    transform: scale(0.99);
+}
+
+/* Form Footer Registration Details */
+.form-footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.register-link {
+    color: #0099ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness Viewport Adjustments */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .left-section {
+        display: none; /* Auto-hides illustration on tiny screens for cleaner layout */
+    }
+    .form-section {
+        padding: 50px 24px;
+    }
+}
